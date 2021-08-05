@@ -1,0 +1,21 @@
+{
+  "name":"Year Progress Bar",
+  "short_name":"Year Progress Bar",
+  "description":"This site displays the progress of the year.",
+  "display":"standalone",
+  "start_url":"/",
+  "theme_color":"#1e90ff",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/icons/icon-512x512.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ],
+  "splash_pages":null
+}

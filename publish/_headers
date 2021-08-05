@@ -1,0 +1,9 @@
+https://year-progress-bar.pages.dev/*
+  X-Robots-Tag: noindex
+  Permissions-Policy: interest-cohort=()
+  X-Frame-Options: SAMEORIGIN
+
+http://year-progress-bar.pages.dev/*
+  X-Robots-Tag: noindex
+  Permissions-Policy: interest-cohort=()
+  X-Frame-Options: SAMEORIGIN

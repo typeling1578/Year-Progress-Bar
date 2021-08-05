@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+    <title>Year Progress Bar</title>
+    <meta http-equiv="content-language" content="en">
+    <meta name="description" content="This site displays the progress of the year.">
+    <meta name="author" content="@typeling1578">
+
+    <meta name="google-site-verification" content="ESywyNewEfiP749nSpGweT678QjaLCULpaU410gg3dY" />
+    <meta name="msvalidate.01" content="717F6BF5E32C5B675F5CF86193E194FB" />
+
+    <meta property="og:title" content="Year Progress Bar">
+    <meta property="og:description" content="This site displays the progress of the year.">
+    <meta property="og:image" content="https://year-progress-bar.ml/icons/icon-144x144.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@typeling1578">
+    <meta name="twitter:creator" content="@typeling1578">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.jpg">
+    <link rel="icon" type="image/webp" sizes="192x192" href="/icons/icon-192x192.webp">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="/icons/favicon-32x32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="/icons/favicon-16x16.jpg">
+
+    <script>
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister();
+            }
+            caches.keys().then(function(keys) {
+                for(let key of keys) {
+                    caches.delete(key);
+                }
+            });
+        });
+    </script>
+
+    <style>
+        #progress_bar_name {
+            margin: 0;
+        }
+
+        #progress_bar {
+            border: 5px solid black;
+            width: calc(100% - 10px);
+            height: 55px;
+            background-color: #e3e3ef;
+            max-width: 600px;
+            margin: auto
+        }
+
+        div#message {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="links"><a href="/about.html">About</a></div>
+        <div id="contents">
+            <h1 id="progress_bar_name">Year Progress Bar</h1>
+            <div id="progress_bar"></div>
+            <div id="message"></div>
+            <input id="show_next_year_progress_bar_button" type="button" value="Show next year's progress bar" style="display: none;">
+            <div id="debug_log"></div>
+            <br>
+            <small>&copy; 2020-2022 <a href="https://twitter.com/typeling1578" target="_blank">@typeling1578</a>.</small>
+        </div>
+    </div>
+
+    <script>
+        {
+            const progress_bar_background_color = '#e3e3ef';
+            const progress_bar_foreground_color = '#00a8ff';
+            const message_digit = 1000000;
+            const update_date_interval_time = 50;
+            let progress_bar = document.querySelector("#progress_bar");
+            let message_elem = document.getElementById("message");
+            let show_next_year_progress_bar_button = document.getElementById("show_next_year_progress_bar_button");
+            let update_date_interval = null;
+            let old_year = new Date().getFullYear();
+            let isUpdateRunning = false;
+
+            let display_update = function(p, message) {
+                progress_bar.style.background = `linear-gradient(to right, ${progress_bar_foreground_color} 0%, ${progress_bar_foreground_color} ${Math.floor(p * 10) / 10}%, ${progress_bar_background_color} ${Math.floor(p * 10) / 10}%, ${progress_bar_background_color} 100%)`
+                message_elem.innerText = message;
+            }
+            
+            let update_date = function() {
+                if (isUpdateRunning) {
+                    return;
+                }
+                isUpdateRunning = true;
+                let now_date = new Date();
+                if(
+                    /*基本は年が変わったことを検知して100%にする*/
+                    old_year < now_date.getFullYear() ||
+                    /*もしold_yearの値がおかしくなった場合の対策コード*/
+                    (
+                        now_date.getMonth() == 0 &&
+                        now_date.getDate() == 1 &&
+                        now_date.getHours() == 0 &&
+                        now_date.getMinutes() == 0 &&
+                        (
+                            now_date.getSeconds() == 0 ||
+                            now_date.getSeconds() == 1
+                        )
+                    )
+                ) {
+                    // 新年
+                    clearInterval(update_date_interval);
+                    let p = 100;
+                    let message = (now_date.getFullYear() - 1) + " is 100% complete!"; // old_yearの値がおかしくなった場合のことを考慮して (現在の年 - 1) する
+                    setTimeout(function () {
+                        show_next_year_progress_bar_button.style.display = "";
+                    }, 3000);
+                    display_update(p, message);
+                } else {
+                    // 年が変わっていない
+                    let now_year = now_date.getFullYear();
+                    let oneyear_time = new Date(now_year + 1, 1 - 1, 1, 0, 0, 0).getTime() - new Date(now_year, 1 - 1, 1, 0, 0, 0).getTime(); // 1年の時間
+                    let until_next_year = new Date(now_year + 1, 1 - 1, 1, 0, 0, 0).getTime() - now_date.getTime(); // 次の年までの時間
+                    /*ここの問題点は、JSでの直接計算は構造上もちろん精度が低いので、間違った値が表示される可能性がある。*/
+                    let p = 100 - until_next_year / oneyear_time * 100; // 100 - 次の年までの時間 / 1年の時間 * 100 = 今年の完了度
+                    let message = now_date.getFullYear() + " is " + Math.floor(p * message_digit) / message_digit + "% complete.";
+                    display_update(p, message);
+                }
+                old_year = now_date.getFullYear();
+                isUpdateRunning = false;
+            }
+
+            update_date();
+            update_date_interval = setInterval(update_date, update_date_interval_time);
+
+            show_next_year_progress_bar_button.addEventListener("click", function (e) {
+                e.target.style.display = "none";
+                update_date_interval = setInterval(update_date, update_date_interval_time);
+            })
+        }
+    </script>
+</body>
+
+</html>
