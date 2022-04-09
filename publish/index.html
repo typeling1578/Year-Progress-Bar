@@ -152,6 +152,7 @@
 
             show_next_year_progress_bar_button.addEventListener("click", function (e) {
                 e.target.style.display = "none";
+                isUpdateRunning = false;
                 update_date_interval = setInterval(update_date, update_date_interval_time);
             })
         }
