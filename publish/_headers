@@ -3,7 +3,6 @@ https://year-progress-bar.pages.dev/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Content-Security-Policy: default-src 'self';
   Access-Control-Allow-Origin: 
 
 http://year-progress-bar.pages.dev/*
@@ -11,19 +10,16 @@ http://year-progress-bar.pages.dev/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Content-Security-Policy: default-src 'self';
   Access-Control-Allow-Origin: 
 
 https://year-progress-bar.ml/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Content-Security-Policy: default-src 'self';
   Access-Control-Allow-Origin: 
 
 http://year-progress-bar.ml/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Content-Security-Policy: default-src 'self';
   Access-Control-Allow-Origin: 
