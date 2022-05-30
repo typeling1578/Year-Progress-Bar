@@ -2,16 +2,28 @@ https://year-progress-bar.pages.dev/*
   X-Robots-Tag: noindex
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: same-origin
+  Content-Security-Policy: default-src 'self';
+  Access-Control-Allow-Origin: 
 
 http://year-progress-bar.pages.dev/*
   X-Robots-Tag: noindex
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: same-origin
+  Content-Security-Policy: default-src 'self';
+  Access-Control-Allow-Origin: 
 
 https://year-progress-bar.ml/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: same-origin
+  Content-Security-Policy: default-src 'self';
+  Access-Control-Allow-Origin: 
 
 http://year-progress-bar.ml/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: same-origin
+  Content-Security-Policy: default-src 'self';
+  Access-Control-Allow-Origin: 
