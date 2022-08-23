@@ -3,23 +3,23 @@ https://year-progress-bar.pages.dev/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Access-Control-Allow-Origin: 
+  Access-Control-Allow-Origin: year-progress-bar.pages.dev
 
 http://year-progress-bar.pages.dev/*
   X-Robots-Tag: noindex
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Access-Control-Allow-Origin: 
+  Access-Control-Allow-Origin: year-progress-bar.pages.dev
 
 https://year-progress-bar.ml/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Access-Control-Allow-Origin: 
+  Access-Control-Allow-Origin: year-progress-bar.ml
 
 http://year-progress-bar.ml/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
-  Access-Control-Allow-Origin: 
+  Access-Control-Allow-Origin: year-progress-bar.ml
