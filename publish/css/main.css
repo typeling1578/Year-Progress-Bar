@@ -54,7 +54,8 @@ a {
 /*bg color*/
 body {
     /*background: linear-gradient(120deg, #e0ffff 0%, #1e90ff 100%);*/
-    background: linear-gradient(120deg, #e0ffff 0%, burlywood 100%);
+    /*background: linear-gradient(120deg, #e0ffff 0%, burlywood 100%);*/
+    background: linear-gradient(-45deg, #1e90ff, #a8e1ee, #c2f9d0, rgb(247, 255, 141), burlywood);
 }
 
 div#main {
