@@ -20,6 +20,7 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    color: #ccc;
 }
 
 @media (min-width: 576px) {
@@ -48,14 +49,35 @@ body {
 
 a {
     /*color: rgb(27,149,224);*/
-    color: #000;
+    color: #ccc;
 }
 
 /*bg color*/
 body {
     /*background: linear-gradient(120deg, #e0ffff 0%, #1e90ff 100%);*/
     /*background: linear-gradient(120deg, #e0ffff 0%, burlywood 100%);*/
-    background: linear-gradient(-45deg, #1e90ff, #a8e1ee, #c2f9d0, rgb(247, 255, 141), burlywood);
+    /*background: linear-gradient(-45deg, #1e90ff, #a8e1ee, #c2f9d0, rgb(247, 255, 141), burlywood);*/
+}
+
+body {
+    background: linear-gradient(120deg, #0aa 0%, #002040 100%);
+    /*background: linear-gradient(120deg, #005e5e 0%, #00468b 100%);*/
+    background-size: 150% 150%;
+    animation-name: gradation;
+    animation-duration: 5.0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gradation{
+    0%{
+        background-position: 0 0;
+    }
+    
+    100%{
+        background-position: 100% 100%;
+    }
 }
 
 div#main {
