@@ -1,5 +1,4 @@
 https://year-progress-bar.pages.dev/*
-  X-Robots-Tag: noindex
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
@@ -7,21 +6,6 @@ https://year-progress-bar.pages.dev/*
   Cross-Origin-Resource-Policy: same-origin
 
 http://year-progress-bar.pages.dev/*
-  X-Robots-Tag: noindex
-  Permissions-Policy: interest-cohort=()
-  X-Frame-Options: SAMEORIGIN
-  Referrer-Policy: same-origin
-  ! Access-Control-Allow-Origin
-  Cross-Origin-Resource-Policy: same-origin
-
-https://year-progress-bar.ml/*
-  Permissions-Policy: interest-cohort=()
-  X-Frame-Options: SAMEORIGIN
-  Referrer-Policy: same-origin
-  ! Access-Control-Allow-Origin
-  Cross-Origin-Resource-Policy: same-origin
-
-http://year-progress-bar.ml/*
   Permissions-Policy: interest-cohort=()
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: same-origin
