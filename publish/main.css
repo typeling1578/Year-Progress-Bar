@@ -21,6 +21,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     color: #ccc;
+    font-size: 1.1em;
 }
 
 @media (min-width: 576px) {
@@ -57,16 +58,16 @@ a {
 }
 
 #progress_bar {
-    border: 5px solid black;
-    width: calc(100% - 10px);
+    border: 4px solid black;
+    width: calc(100% - 8px);
     height: 55px;
     background-color: #e3e3ef;
     max-width: 600px;
-    margin: auto
+    margin: auto;
 }
 
 div#message {
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 #show_next_year_progress_bar_button {
