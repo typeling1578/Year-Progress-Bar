@@ -24,3 +24,20 @@ const COLOR_THEMES = [
 document.addEventListener("DOMContentLoaded", function() {
     document.body.classList.add(COLOR_THEMES.slice(-1)[0]["css_class"]);
 }, { once: true });
+
+// Remove Dark Reader CSS
+{
+    let callback = function() {
+        document.querySelector(".darkreader")?.remove();
+    }
+
+    const config = { attributes: true, childList: true, subtree: true };
+
+    const targetNode = document.documentElement;
+
+    const observer = new MutationObserver(callback);
+
+    observer.observe(targetNode, config);
+
+    callback();
+}
