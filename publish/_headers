@@ -4,6 +4,7 @@ https://year-progress-bar.pages.dev/*
   Referrer-Policy: same-origin
   ! Access-Control-Allow-Origin
   Cross-Origin-Resource-Policy: same-origin
+  Content-Security-Policy: default-src 'self'
 
 http://year-progress-bar.pages.dev/*
   Permissions-Policy: interest-cohort=()
@@ -11,3 +12,4 @@ http://year-progress-bar.pages.dev/*
   Referrer-Policy: same-origin
   ! Access-Control-Allow-Origin
   Cross-Origin-Resource-Policy: same-origin
+  Content-Security-Policy: default-src 'self'
