@@ -27,38 +27,6 @@
     <link rel="icon" type="image/webp" sizes="192x192" href="/icons/icon-192x192.webp">
     <link rel="icon" type="image/jpeg" sizes="32x32" href="/icons/favicon-32x32.jpg">
     <link rel="icon" type="image/jpeg" sizes="16x16" href="/icons/favicon-16x16.jpg">
-
-    <script>
-        navigator.serviceWorker.getRegistrations().then(function(registrations) {
-            for(let registration of registrations) {
-                registration.unregister();
-            }
-            caches.keys().then(function(keys) {
-                for(let key of keys) {
-                    caches.delete(key);
-                }
-            });
-        });
-    </script>
-
-    <style>
-        #progress_bar_name {
-            margin: 0;
-        }
-
-        #progress_bar {
-            border: 5px solid black;
-            width: calc(100% - 10px);
-            height: 55px;
-            background-color: #e3e3ef;
-            max-width: 600px;
-            margin: auto
-        }
-
-        div#message {
-            font-size: 1.2rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -68,7 +36,7 @@
             <h1 id="progress_bar_name">Year Progress Bar</h1>
             <div id="progress_bar"></div>
             <div id="message"></div>
-            <input id="show_next_year_progress_bar_button" type="button" value="Show next year's progress bar" style="display: none;">
+            <input id="show_next_year_progress_bar_button" type="button" value="Show next year's progress bar">
             <br>
             <small>&copy; 2020-2023 <a href="https://twitter.com/typeling1578" target="_blank">@typeling1578</a>.</small>
         </div>

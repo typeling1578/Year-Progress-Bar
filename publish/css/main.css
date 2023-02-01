@@ -69,6 +69,10 @@ div#message {
     font-size: 1.2rem;
 }
 
+#show_next_year_progress_bar_button {
+    display: none;
+}
+
 /*bg color*/
 body {
     /*background: linear-gradient(120deg, #e0ffff 0%, #1e90ff 100%);*/
