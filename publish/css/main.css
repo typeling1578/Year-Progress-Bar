@@ -52,6 +52,23 @@ a {
     color: #ccc;
 }
 
+#progress_bar_name {
+    margin: 0;
+}
+
+#progress_bar {
+    border: 5px solid black;
+    width: calc(100% - 10px);
+    height: 55px;
+    background-color: #e3e3ef;
+    max-width: 600px;
+    margin: auto
+}
+
+div#message {
+    font-size: 1.2rem;
+}
+
 /*bg color*/
 body {
     /*background: linear-gradient(120deg, #e0ffff 0%, #1e90ff 100%);*/
