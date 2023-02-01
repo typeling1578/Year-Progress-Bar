@@ -12,6 +12,7 @@ body {
     overflow-wrap: break-word;
     font-family: 'Year-Progress-Bar-Font';
     font-size: 1.1em;
+    color: black;
 }
 
 body {
@@ -21,7 +22,6 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    color: black;
 }
 
 @media (min-width: 576px) {
