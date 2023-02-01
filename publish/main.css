@@ -11,6 +11,7 @@ html {
 body {
     overflow-wrap: break-word;
     font-family: 'Year-Progress-Bar-Font';
+    font-size: 1.1em;
 }
 
 body {
@@ -20,8 +21,6 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    color: #ccc;
-    font-size: 1.1em;
 }
 
 @media (min-width: 576px) {
@@ -49,8 +48,7 @@ body {
 }
 
 a {
-    /*color: rgb(27,149,224);*/
-    color: #ccc;
+    color: inherit;
 }
 
 #progress_bar_name {
@@ -66,40 +64,12 @@ a {
     margin: auto;
 }
 
-div#message {
+#progress_bar_message {
     font-size: 1.2em;
 }
 
 #show_next_year_progress_bar_button {
     display: none;
-}
-
-/*bg color*/
-body {
-    /*background: linear-gradient(120deg, #e0ffff 0%, #1e90ff 100%);*/
-    /*background: linear-gradient(120deg, #e0ffff 0%, burlywood 100%);*/
-    /*background: linear-gradient(-45deg, #1e90ff, #a8e1ee, #c2f9d0, rgb(247, 255, 141), burlywood);*/
-}
-
-body {
-    background: linear-gradient(120deg, #0aa 0%, #002040 100%);
-    /*background: linear-gradient(120deg, #005e5e 0%, #00468b 100%);*/
-    background-size: 150% 150%;
-    animation-name: gradation;
-    animation-duration: 5.0s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes gradation{
-    0%{
-        background-position: 0 0;
-    }
-    
-    100%{
-        background-position: 100% 100%;
-    }
 }
 
 div#main {
@@ -120,3 +90,43 @@ div#contents {
     text-align: center;
     width: 100%;
 }
+
+/*bg color*/
+body.season1-theme {
+    background: linear-gradient(120deg, #e0ffff 0%, #1e90ff 100%);
+}
+
+body.season2-theme {
+    background: linear-gradient(120deg, #e0ffff 0%, burlywood 100%);
+}
+
+body.season3-theme {
+    background: linear-gradient(-45deg, #1e90ff, #a8e1ee, #c2f9d0, rgb(247, 255, 141), burlywood);
+}
+
+body.season4-theme {
+    color: #ccc;
+    background: linear-gradient(120deg, #0aa 0%, #002040 100%);
+    background-size: 150% 150%;
+    animation-name: season4-theme-animation;
+    animation-duration: 5.0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes season4-theme-animation {
+    0%{
+        background-position: 0 0;
+    }
+    
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+/* Season 5 Theme */
+/* Candidate 1
+body.season5-theme {
+    background: linear-gradient(120deg, #0aa, #002040, #0aa, #002040);
+}
+*/

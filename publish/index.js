@@ -5,8 +5,8 @@
     const update_date_interval_time = 50;
     const isDebug = false;
     let progress_bar = document.querySelector("#progress_bar");
-    let message_elem = document.getElementById("message");
-    let show_next_year_progress_bar_button = document.getElementById("show_next_year_progress_bar_button");
+    let message_elem = document.querySelector("#progress_bar_message");
+    let show_next_year_progress_bar_button = document.querySelector("#show_next_year_progress_bar_button");
     let update_date_interval = null;
     let old_year = new Date().getFullYear();
     let isUpdateRunning = false;
