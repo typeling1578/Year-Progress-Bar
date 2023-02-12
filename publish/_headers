@@ -5,6 +5,7 @@ https://year-progress-bar.pages.dev/*
   ! Access-Control-Allow-Origin
   Cross-Origin-Resource-Policy: same-origin
   Content-Security-Policy: default-src 'self'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 http://year-progress-bar.pages.dev/*
   Permissions-Policy: interest-cohort=()
@@ -13,3 +14,4 @@ http://year-progress-bar.pages.dev/*
   ! Access-Control-Allow-Origin
   Cross-Origin-Resource-Policy: same-origin
   Content-Security-Policy: default-src 'self'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
