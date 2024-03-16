@@ -28,7 +28,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: auto;
-    margin-left: auto;    
+    margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -64,12 +64,14 @@ a {
 }
 
 #progress_bar {
-    border: 4px solid black;
+    border-radius: 8px;
     width: calc(100% - 8px);
     height: 55px;
     background-color: #e3e3ef;
     max-width: 600px;
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #progress_bar_message {
@@ -113,7 +115,7 @@ body.season3-theme {
 }
 
 body.season4-theme {
-    color: #ccc;
+    color: #fff;
     background: linear-gradient(120deg, #0aa 0%, #002040 100%);
     background-size: 150% 150%;
     animation-name: season4-theme-animation;
