@@ -96,6 +96,7 @@ export default function Home() {
     <RootElement>
       <div className="w-full h-full flex flex-col justify-center items-center gap-6 text-center">
         <h1 data-name="Title" className="text-[32px] font-bold">Year Progress Bar</h1>
+
         <div
           data-name="Progress Bar"
           className="w-full max-w-2xl h-16 rounded-md"
