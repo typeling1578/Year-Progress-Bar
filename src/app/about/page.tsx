@@ -1,5 +1,6 @@
 import RootElement from "@/components/RootElement";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
@@ -14,7 +15,7 @@ export default function About() {
           This site displays the progress of the year.
           <br />
           <br />
-          <a className="underline" href="https://github.com/typeling1578/Year-Progress-Bar">Source Code</a>
+          <Link className="underline" target="_blank" href="https://github.com/typeling1578/Year-Progress-Bar">Source Code</Link>
         </div>
       </div>
     </RootElement>
