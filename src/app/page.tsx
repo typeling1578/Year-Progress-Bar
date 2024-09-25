@@ -10,7 +10,7 @@ export default function Home() {
   };
 
   const [ year, setYear ] = useState<number>();
-  const [ percent, setPercent ] = useState<number>();
+  const [ percent, setPercent ] = useState<string>("");
   const [ isEnded, setIsEnded ] = useState<boolean>(false);
   const [ showNextYearButton, setShowNextYearButton ] = useState<boolean>(false);
 
@@ -19,7 +19,7 @@ export default function Home() {
       return;
     }
 
-    const message_digit = 1000000;
+    const decimal_digits = 6;
     const update_date_interval_time = 50;
 
     let isUpdating = false;
@@ -51,7 +51,7 @@ export default function Home() {
         clearInterval(interval);
 
         setYear(now_date.getFullYear() - 1); // old_yearの値がおかしくなった場合のことを考慮して (現在の年 - 1) する
-        setPercent(100);
+        setPercent("100");
 
         setTimeout(() => {
           setShowNextYearButton(true);
@@ -71,7 +71,7 @@ export default function Home() {
         const p = 100 - until_next_year_time / oneyear_time * 100; // 100 - 次の年までの時間 / 1年の時間 * 100 = 今年の完了度
 
         setYear(now_year);
-        setPercent(Math.floor(p * message_digit) / message_digit);
+        setPercent((Math.floor(p * (10**decimal_digits)) / (10**decimal_digits)).toFixed(decimal_digits));
       }
 
       old_year = now_date.getFullYear();
@@ -112,7 +112,7 @@ export default function Home() {
           data-name="Message"
           className="text-xl font-semibold tabular-nums"
         >
-          {year} is {percent !== 100 ? percent?.toFixed(6) : percent}% complete{percent === 100 ? "!" : "."}
+          {year} is {percent}% complete{percent === "100" ? "!" : "."}
         </div>
 
         <input
