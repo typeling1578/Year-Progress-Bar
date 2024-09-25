@@ -14,7 +14,7 @@ export default function RootElement({ children }: { children: React.ReactNode })
         gridTemplateRows: "auto 1fr auto",
       }}
     >
-      <div className="flex gap-4 font-medium" id="links">
+      <div className="flex gap-4 font-semibold" id="links">
         {pathname !== "/" ? <Link className="underline" href="/">Progress Bar</Link> : ""}
         {pathname !== "/about" ? <Link className="underline" href="/about">About</Link> : ""}
       </div>

@@ -95,7 +95,7 @@ export default function Home() {
   return (
     <RootElement>
       <div className="w-full h-full flex flex-col justify-center items-center gap-6 text-center">
-        <h1 data-name="Title" className="text-[32px] font-bold">Year Progress Bar</h1>
+        <h1 data-name="Title" className="text-[32px] font-extrabold">Year Progress Bar</h1>
 
         <div
           data-name="Progress Bar"
@@ -110,9 +110,9 @@ export default function Home() {
 
         <div
           data-name="Message"
-          className="text-xl font-medium"
+          className="text-xl font-semibold tabular-nums"
         >
-          {year} is {percent}% complete{percent === 100 ? "!" : "."}
+          {year} is {percent !== 100 ? percent?.toFixed(6) : percent}% complete{percent === 100 ? "!" : "."}
         </div>
 
         <input

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Figtree } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
-const poppins = Poppins({
-  weight: ["400", "500", "700"],
+const poppins = Figtree({
+  weight: ["400", "600", "800"],
   subsets: ["latin"],
 });
 
