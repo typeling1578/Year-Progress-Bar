@@ -4,7 +4,7 @@ import { Figtree } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
-const figtree = Figtree({
+const poppins = Figtree({
   weight: ["400", "600", "800"],
   subsets: ["latin"],
 });
@@ -40,7 +40,7 @@ export default function RootLayout({
         <meta name="twitter:site" content="@typeling1578" />
         <meta name="twitter:creator" content="@typeling1578" />
       </head>
-      <body className={`${figtree.className} season5-theme`}>
+      <body className={`${poppins.className} season5-theme`}>
         <NextTopLoader color="#175dee" showSpinner={false} />
         {children}
       </body>
