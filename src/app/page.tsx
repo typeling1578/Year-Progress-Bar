@@ -2,6 +2,12 @@
 
 import RootElement from "@/components/RootElement";
 import { useEffect, useState } from "react";
+import { Figtree } from "next/font/google";
+
+const figtree = Figtree({
+  weight: ["600"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   const theme = {
@@ -110,7 +116,7 @@ export default function Home() {
 
         <div
           data-name="Message"
-          className="text-xl font-medium"
+          className={`text-xl font-semibold ${figtree.className} tabular-nums`}
         >
           {year} is {percent}% complete{percent === "100" ? "!" : "."}
         </div>
