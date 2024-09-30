@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Season 1 Theme: Pale Sky */
+body.season1-theme {
+  color: black;
+  background: linear-gradient(120deg, #e0ffff 0%, #1e90ff 100%);
+}
+
+/* Season 2 Theme: Dusk Sky */
+body.season2-theme {
+  color: black;
+  background: linear-gradient(120deg, #e0ffff 0%, burlywood 100%);
+}
+
+/* Season 3 Theme: Rainbow! */
+body.season3-theme {
+  color: black;
+  background: linear-gradient(-45deg, #1e90ff, #a8e1ee, #c2f9d0, rgb(247, 255, 141), burlywood);
+}
+
+/* Season 4 Theme: Submarine */
+body.season4-theme {
+  color: #fff;
+  background: linear-gradient(120deg, #0aa 0%, #002040 100%);
+  background-size: 150% 150%;
+  animation-name: season4-theme-animation;
+  animation-duration: 5.0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes season4-theme-animation {
+  0%{
+      background-position: 0 0;
+  }
+
+  100%{
+      background-position: 100% 100%;
+  }
+}
+
+/* Season 5 Theme: Teal Aurora */
+body.season5-theme {
+  color: white;
+  background: linear-gradient(120deg, #0aa, #002040, #0aa, #002040);
+}
