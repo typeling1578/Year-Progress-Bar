@@ -38,6 +38,8 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@typeling1578" />
         <meta name="twitter:creator" content="@typeling1578" />
+
+        <meta name="google-site-verification" content="WFAJllBufs00iAPSZtrSL8e-pi7xWuXX-_YnIOxI_E8" />
       </head>
       <body className={`${poppins.className} season5-theme`}>
         <NextTopLoader color="#175dee" showSpinner={false} />
