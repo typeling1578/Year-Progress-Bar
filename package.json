@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "next": "15.3.4",
-    "nextjs-toploader": "^3.6.15",
+    "nextjs-toploader": "^3.8.16",
     "react": "^18",
     "react-dom": "^18"
   },
