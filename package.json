@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.5.5",
+    "next": "16.0.1",
     "nextjs-toploader": "^3.9.17",
     "react": "^19",
     "react-dom": "^19"
